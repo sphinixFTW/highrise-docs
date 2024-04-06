@@ -2,6 +2,7 @@ import { getPage, getPages } from "@/app/source";
 import type { Metadata } from "next";
 import { DocsPage, DocsBody } from "fumadocs-ui/page";
 import { notFound } from "next/navigation";
+import { RollButton } from "fumadocs-ui/components/roll-button";
 
 export default async function Page({
   params,
@@ -18,6 +19,7 @@ export default async function Page({
 
   return (
     <DocsPage lastUpdate={new Date()} toc={page.data.exports.toc}>
+      <RollButton percentage={0.1} />
       <DocsBody>
         <h1>{page.data.title}</h1>
         <MDX />

@@ -1,0 +1,136 @@
+---
+title: Getting Started
+description: A brief explanation of how to start your very first Highrise world using Highrise Studio Hub and Unity Hub.
+---
+
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { Callout } from 'fumadocs-ui/components/callout';
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+import { InlineTOC } from "fumadocs-ui/components/inline-toc";
+
+<Steps>
+<Step>
+## Installing Unity Hub
+<Callout title="Step One">
+Unity Hub is the key to utilizing Highrise Studio Hub.
+</Callout>
+
+<Tabs items={['Installing Unity Hub', 'What is Unity Hub?']} defaultIndex={0}>
+<Tab value="Installing Unity Hub">
+ To get started in creating your very first world, you first have to install the Hub by clicking the button below.
+<Cards>
+  <Card title="Install Unity Hub" href="https://unity.com/download" className="card" />
+</Cards>
+</Tab>
+
+<Tab value="What is Unity Hub?">
+- Unity Hub is a tool that helps you manage your Unity projects and installations.
+- It's essential for using Highrise Studio Hub because it allows you to access and organize your Highrise projects efficiently.
+- With Unity Hub, you can easily install different versions of Unity and switch between them as needed.
+- It provides a convenient way to discover and access the Highrise Studio Hub, where you can create your own worlds and experiences.
+</Tab>
+</Tabs>
+</Step>
+
+<Step>
+## Installing Studio Hub
+<Callout title="Step Two">
+Highrise Studio Hub is the key to create 3D worlds in Highrise
+</Callout>
+
+<Tabs items={['Installing Studio Hub', 'What is Studio Hub?']} defaultIndex={0}>
+
+<Tab value="Installing Studio Hub">
+Step two is to install the official Studio Hub, which serves as a central platform for creating games on the Highrise platform.
+<Cards>
+  <Card title="Install Studio Hub" href="https://create.highrise.game/highrise-studio" className="card" />
+</Cards>
+</Tab>
+
+<Tab value="What is Studio Hub?">
+- Highrise Studio Hub is a central platform for creating games and experiences on the Highrise platform.
+- It serves as the main workspace where you can access tools, resources, and manage your projects. 
+- Highrise Studio Hub simplifies the process of developing and publishing games for various devices, offering a user-friendly interface and a comprehensive set of features. 
+- Whether you're a beginner or an experienced developer, Highrise Studio Hub provides everything you need to bring your ideas to life and share them with others worldwide.
+</Tab>
+</Tabs>
+</Step>
+
+<Step>
+## Creating Your First World
+<Callout title="Attention" type="error">
+  Creating a project might take a while, depending on your computer's speed, so please be patient while it loads.
+</Callout>
+
+<Tabs
+  items={['New Project', 'Signing In', 'Starting The Project', 'Video Showcase']}
+  defaultIndex={0}>
+
+  <Tab value="New Project">
+  <Callout title="Step One" type="info">
+  Click "New Project" top right corner and opt for the Basic Template.
+  </Callout>
+  <Accordions>
+  <Accordion title="Preview Examples">
+  <img src="https://i.ibb.co/4SRb7kK/hub.png" alt="Highrise Hub" style={{ width: '100%' }} />
+  </Accordion>
+  </Accordions>
+  
+  </Tab>
+
+  <Tab value="Signing In">
+  <Callout title="Step Two" type="info">
+    Now that we're in Unity, on the top left toolbar you can use the "Sign in" button to sign into your Highrise Account.
+  </Callout>
+
+  <Accordions>
+  <Accordion title="Preview Examples">
+    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <img src="https://i.ibb.co/3djdMj6/sign-in.png" alt="sign-in" style={{ width: '50%', borderRight: '1px solid #000' }} />
+    <img src="https://i.ibb.co/ZJj4K1c/signed-in.png" alt="signed-in" style={{ width: '50%' }} />
+    </div>
+  </Accordion>
+  </Accordions>
+
+  </Tab>
+
+  <Tab value="Starting The Project">
+  <Callout title="Step Three" type="info">
+    You can now test your world with the "Play" button in the middle of the top toolbar.
+  </Callout>
+  <Accordions>
+  <Accordion title="Preview Examples">
+    <img src="https://i.ibb.co/d04v7fH/play.png" alt="play" style={{ width: '100%' }}/>
+  </Accordion>
+  </Accordions>
+  
+  </Tab>
+
+  <Tab value="Video Showcase">
+  <img src="https://i.ibb.co/GMYwVzq/getting-started.gif" alt="Getting Started" style={{ width: "100%" }}/>
+  </Tab>
+</Tabs>
+</Step>
+</Steps>
+
+And voilà! Your very first Highrise 3D world has been created 🎉<br />
+<InlineTOC
+        items={[
+          {
+            title: "Adding Assets",
+            url: "/docs/assets",
+            depth: 2,
+          },
+          {
+            title: "Creating Scripts",
+            url: "/docs/scripting",
+            depth: 2,
+          },
+          {
+            title: "Adjust The Room Lighting and Background",
+            url: "/docs/lighting",
+            depth: 2,
+          },
+        ]}
+/>
