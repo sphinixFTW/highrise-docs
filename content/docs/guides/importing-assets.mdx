@@ -1,0 +1,75 @@
+---
+title: Importing Assets
+description: Unlock the Power of Assets Enhance Your Creations with Ease!
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { Callout } from 'fumadocs-ui/components/callout';
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+
+<Callout title="How to import Assets" type="info">
+    There are many ways to import assets like textures and meshes into Unity. Use the navigator below to switch between methods. Click 'Show Preview' for image previews.
+</Callout>
+
+<Tabs 
+items={['Asset Store', 'Manual Import', 'Drag & Drop', 'Video Showcase']}
+  defaultIndex={0}>
+
+<Tab value="Asset Store">
+Unity's Asset Store is full of pre-made assets waiting to be used. To find them:
+
+1. Navigate to Unity's Asset Store by clicking on `Window > Asset Store`.
+2. Search for the desired asset online.
+3. Select the asset you want.
+4. Import the chosen asset directly into your project.
+5. Enjoy the convenience of seamless integration!
+<Accordions>
+<Accordion title="Preview Examples">
+<img src="https://i.ibb.co/6W7yNYn/assets-store.png" alt="assets-store"  style={{ width: '100%' }} />
+</Accordion>
+</Accordions>
+</Tab>
+
+<Tab value="Manual Import">
+To import locally stored files:
+
+1. Right-click within the Project panel.
+2. Select `Import New Asset`.
+3. Browse to the location of your desired file.
+4. Click to import the selected file.
+5. Enjoy easy importation of locally stored assets!
+
+<Accordions>
+<Accordion title="Preview Examples">
+<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+  <img src="https://i.ibb.co/1rTbvjp/manual-import-1.png" alt="manual-import-1" style={{ width: '50%', borderRight: '1px solid #000' }} />
+  <img src="https://i.ibb.co/GT87W4M/manual-import-2.png" alt="manual-import-2" style={{ width: '50%' }} />
+</div>
+</Accordion>
+</Accordions>
+</Tab>
+
+<Tab value="Drag & Drop">
+An effortless way is to directly drag and drop files from your Explorer/Finder into Unity's Project panel.
+
+1. Open your Explorer (Windows) or Finder (Mac).
+2. Locate the files you want to import into Unity.
+3. Click and hold on the desired files.
+4. Drag the files over to Unity's Project panel.
+5. Release the mouse button to drop the files into Unity.
+6. Watch as Unity automatically imports the dragged files into your project.
+7. Enjoy the simplicity of drag-and-drop asset importing!
+<Accordions>
+<Accordion title="Preview Examples">
+<img src="https://i.ibb.co/mFF67SW/drag-drop.png" alt="drag-drop"  style={{ width: '100%' }} />
+</Accordion>
+</Accordions>
+</Tab>
+</Tabs>
+
+<hr className="spacer" />
+## <p className="congratulations"> Congratulations!  </p> You've Integrated the Custom Asset into Your Unity Project
+
+<div className="footer-note">
+  You have successfully set up a new Unity project, added a custom asset from the Asset Store, and incorporated it into your scene with Highrise shaders. Happy development!
+</div>

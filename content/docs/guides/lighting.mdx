@@ -1,0 +1,55 @@
+---
+title: Adjust The Room Lighting and Background
+description: Illuminate Your World Master Unity Lighting
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { Callout } from 'fumadocs-ui/components/callout';
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+
+<Callout>
+  By default, the scene includes a lighting settings file, which you can find in the **Projects** tab in the bottom left corner of the Unity editor.
+</Callout>
+
+<Tabs items={['Access Lighting', 'Understanding Lighting', 'Changing Lighting', 'Video Showcase']} defaultIndex={0}>
+<Tab value="Access Lighting">
+
+  1. Go to `Window > Rendering > Lighting`. Or press `(CMD/CNTRL) + 9` to open the window.
+  2. Navigate to <strong>Understanding Lighting</strong> and <strong>Changing and Saving Lighting</strong> to learn more.
+
+  <Accordions>
+    <Accordion title="Preview Examples">
+      <img src="https://i.ibb.co/5FVbyb8/access-lighting.png" alt="access-lighting"  style={{ width: '100%' }}/>
+    </Accordion>
+  </Accordions>
+</Tab>
+
+<Tab value="Understanding Lighting">
+  <strong>Ambient Lighting:</strong> This is like the overall light in a scene that comes from everywhere. It makes sure things aren't too dark and gives a base level of brightness. In Unity, you can change this by adjusting the Ambient Color in the Lighting window. Messing with this color can totally change how your scene feels.
+  
+  <strong>Skybox Material:</strong> This is what makes the background of your scene look like the sky and surrounding environment. Unity has some ready-made skybox materials for you to use, but you can also make your own or get some from other places. Skybox materials affect how light and colors look in your scene, making it look more realistic and cool.
+</Tab>
+
+<Tab value="Changing Lighting">
+  #### Editing the Skybox Material
+    1. Go to `Assets > Template > Art > Sky` in the bottom left corner of your screen.
+    2. Click on the `(i) Inspector` at the top right corner.
+    3. Change the settings for **Inside** and **Outside** as you like.
+
+  #### Modifying Ambient Colors
+    1. Find `Root > Lighting > Directional Light` in the **Hierarchy** tab at the top left corner.
+    2. Click on `(i) Inspector` at the top right corner.
+    3. Untick the box next to **Directional Light**.
+    4. Go to `Window > Rendering > Lighting`.
+    5. Adjust the **Ambient Color** value to your liking.
+    6. Open the **Generate Lighting** menu in the `(i) Inspector` tab.
+    7. Choose `Clear Baked Data`.
+    8. Check the box next to **Directional Light** in the `(i) Inspector` tab.
+    9. Hit **Generate Lighting** to update the light settings.
+</Tab>
+
+<Tab value="Video Showcase">
+  <img src="https://i.ibb.co/YjWJSPd/lighting.gif" alt="lighting"  style={{ width: '100%' }}/>
+</Tab>
+
+</Tabs>

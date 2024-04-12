@@ -1,6 +1,10 @@
 :root {
   --primary-purple: #7d69f6;
   --primary-blue: #3b82f6;
+  --faded-gray: #f2f3f36c;
+  --spacer-color: #27272a;
+  --primary-yellow: #f6e05e;
+  --primary-red: #ef4444;
 }
 
 html.light {
@@ -67,4 +71,45 @@ body {
     #0f0f0f 2.36%,
     rgba(10, 16, 51, 0) 99.37%
   );
+}
+
+.buttons-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-note {
+  font-size: 0.8rem;
+  color: var(--faded-gray);
+}
+
+hr.spacer {
+  border: 0;
+  border-top: 1px solid var(--spacer-color);
+  width: 100%;
+}
+
+.congratulations {
+  font-size: 1.5rem;
+  color: var(--primary-purple);
+  position: relative;
+  animation: shine 2s linear infinite alternate;
+}
+
+.important {
+  color: var(--primary-red);
+}
+
+@keyframes shine {
+  0% {
+    color: var(--primary-purple);
+  }
+  50% {
+    color: var(--primary-yellow); /* Change color midway */
+  }
+  100% {
+    color: var(--primary-purple);
+  }
 }

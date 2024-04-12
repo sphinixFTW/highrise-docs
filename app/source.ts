@@ -6,7 +6,6 @@ export const { getPage, getPages, pageTree } = loader({
   baseUrl: "/docs",
   rootDir: "docs",
   source: createMDXSource(map),
-  lastModifiedTime: new Date(),
 });
 
 const guidesFolder = pageTree.children.find((child) => child.name === "Guides");
