@@ -3,6 +3,7 @@ import "fumadocs-ui/style.css";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import "./public/styles/global.css";
+import "./public/styles/animations.css";
 
 const inter = Inter({
   subsets: ["latin"],

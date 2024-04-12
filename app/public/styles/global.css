@@ -5,14 +5,25 @@
   --spacer-color: #27272a;
   --primary-yellow: #f6e05e;
   --primary-red: #ef4444;
+  --primary-gray: #b2b4bf;
 }
 
 html.light {
   --background-color: linear-gradient(135deg, #ffffff 0%, #f2f3f3 100%);
+
+  /* scrollbar */
+  --scrollbar-track-color: #ffffff;
+  --scrollbar-thumb-color: #b1b1b170;
+  --scrollbar-thumb-hover-color: #836bff;
 }
 
 html.dark {
   --background-color: linear-gradient(135deg, #1e232c 0%, #14161c 100%);
+
+  /* scrollbar */
+  --scrollbar-track-color: #1e232c;
+  --scrollbar-thumb-color: #363f50e8;
+  --scrollbar-thumb-hover-color: #bbadff;
 }
 
 body {
@@ -80,6 +91,18 @@ body {
   align-items: center;
 }
 
+.row-group h3,
+.row-group .tag {
+  margin: 0;
+}
+
+.row-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
 .footer-note {
   font-size: 0.8rem;
   color: var(--faded-gray);
@@ -102,14 +125,54 @@ hr.spacer {
   color: var(--primary-red);
 }
 
-@keyframes shine {
-  0% {
-    color: var(--primary-purple);
+.small-paragraph {
+  font-size: 0.9rem;
+  color: var(--primary-gray);
+}
+
+.prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: var(--primary-purple);
+}
+
+.h-9 {
+  height: 3rem;
+}
+
+.tag {
+  background-color: #17171a;
+  color: #b2b4bf;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  user-select: none;
+  width: fit-content;
+
+  &&:hover {
+    background-color: #27272a;
   }
-  50% {
-    color: var(--primary-yellow); /* Change color midway */
-  }
-  100% {
-    color: var(--primary-purple);
-  }
+}
+
+.link-not-prose {
+  color: var(--primary-purple);
+  text-decoration: none;
+}
+
+/** Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color) !important;
+  border-radius: 100px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color) !important;
+  border-radius: 100px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover-color) !important;
 }

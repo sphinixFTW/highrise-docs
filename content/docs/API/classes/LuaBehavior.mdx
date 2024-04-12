@@ -1,0 +1,109 @@
+---
+title: Lua Behavior
+description: Understand the Lua Behavior component and how to use it in Highrise Studio.
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+
+### Introduction
+In the Highrise game logic, the LuaBehaviour class is key. 
+It's like the glue that connects Lua scripts to GameObjects in Unity. With LuaBehaviour, you can create and manage Lua scripts that control the behavior of your GameObjects.
+
+
+The keyword `self` refers to the LuaBehaviour instance that the script is attached to.
+This way, you can access the GameObject and its components, such as Transform, OnCollisionEnter, and more.
+
+<Accordions>
+  <Accordion title="Preview Examples">
+```lua
+-- Access the GameObject
+local myGameObject = self.gameObject
+
+-- Print the GameObject's name
+print("My GameObject's name is: " .. myGameObject.name)
+
+-- Output: My GameObject's name is: MyGameObject
+```
+  </Accordion>
+</Accordions>
+
+### Properties
+The LuaBehaviour class has the following properties:
+<Accordions>
+  <Accordion title="What is a property?" className="small-paragraph">
+    A property is like a variable that belongs to an object. 
+    It can store data and be accessed or modified by other objects.
+
+    For example, the `gameObject` property of the LuaBehaviour class is a property that stores the GameObject that the Lua script is attached to.
+    
+
+    Meaning that you can access the GameObject by using the `gameObject` property like this:    
+    ```lua
+    self.gameObject  -- Access the GameObject that the Lua script is attached to
+    ```
+  </Accordion>
+</Accordions>
+<Callout title="Tip">
+  Each property has different properties and methods, to learn more about them, click the title of the property.
+</Callout>
+<Tabs items={['gameObject', 'transform', 'OnCollisionEnter', 'OnCollisionExit', 'OnCollisionStay', 'OnTriggerEnter', 'OnTriggerExit', 'OnTriggerStay', 'Start', 'Update', 'FixedUpdate', 'LateUpdate', 'Initialize With EventConnection']} defaultIndex={0}>
+  <Tab value="gameObject">
+    <div className="row-group">
+      <h3 className="link-not-prose"> 
+        <a className="link-not-prose" href="/docs/API/classes/GameObject">GameObject</a>
+      </h3> 
+      <p className="tag"> ServerAndClient </p>
+    </div>
+  
+    The GameObject property allows you to access the GameObject that the Lua script is attached to. For example `self.gameObject`.
+    #### Example
+    ```lua
+    -- Access the GameObject
+    local myGameObject = self.gameObject
+
+    -- Print the GameObject's name
+    print("My GameObject's name is: " .. myGameObject.name)
+
+    -- Output: My GameObject's name is: MyGameObject
+    ```
+  </Tab>
+  <Tab value="transform">
+    The Transform component of the GameObject.
+  </Tab>
+  <Tab value="OnCollisionEnter">
+    A function that is called when the GameObject collides with another GameObject.
+  </Tab>
+  <Tab value="OnCollisionExit">
+    A function that is called when the GameObject stops colliding with another GameObject.
+  </Tab>
+  <Tab value="OnCollisionStay">
+    A function that is called when the GameObject is colliding with another GameObject.
+  </Tab>
+  <Tab value="OnTriggerEnter">
+    A function that is called when the GameObject enters a trigger collider.
+  </Tab>
+  <Tab value="OnTriggerExit">
+    A function that is called when the GameObject exits a trigger collider.
+  </Tab>
+  <Tab value="OnTriggerStay">
+    A function that is called when the GameObject is inside a trigger collider.
+  </Tab>
+  <Tab value="Start">
+    A function that is called when the GameObject is initialized.
+  </Tab>
+  <Tab value="Update">
+    A function that is called every frame.
+  </Tab>
+  <Tab value="FixedUpdate">
+    A function that is called every fixed frame.
+  </Tab>
+  <Tab value="LateUpdate">
+    A function that is called every frame after all Update functions have been called.
+  </Tab>
+  <Tab value="Initialize With EventConnection">
+    A function that is called when the GameObject is initialized with an EventConnection.
+  </Tab>
+</Tabs>

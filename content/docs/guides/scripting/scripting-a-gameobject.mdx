@@ -1,0 +1,101 @@
+---
+title: Scripting a GameObject
+description: Learn how to create a basic Lua script and add it to a game object.
+---
+import { Callout } from 'fumadocs-ui/components/callout';
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+
+### Introduction
+<p> In this guide, you'll learn how to create a simple Lua script and attach it to a game object. </p>
+
+### What is a Lua Script?
+<p> A Lua script is like a set of instructions written in a language called [Lua](https://www.lua.org/docs.html). 
+It's a way to tell your game objects in Unity how to behave and respond to different situations. 
+So, if you want your character to jump when you press a button or make a door open when your player approaches it, you'd use a Lua script to make that happen! </p>
+
+<Callout title="Attention" type="warn">
+    When constructing a Highrise World, remember that only Lua scripts are included in the package build. Avoid using C# scripts and stick to Lua scripts for implementation.
+</Callout>
+
+## Creating Your First "Hello World" Script in Unity With Lua
+<Steps>
+<Step>
+### Create a New Lua Script
+1. Right-click within the **Project panel**.
+2. Choose `Create > Lua > Script`.
+3. Give your script a name.
+<Accordions>
+  <Accordion title="Preview Examples">
+    <img src="https://i.ibb.co/b6kHT55/creating-scripts.png" alt="creating-scripts"  style={{ width: '100%' }} />
+  </Accordion>
+</Accordions>
+</Step>
+
+<Step>
+### Opening the Script in Visual Studio Code
+1. Double-click the script to open it in your preferred code editor.
+  - Or right-click the script and select **Open**.
+2. Write the following code in your script:
+```lua
+print("Hello, World!")
+```
+</Step>
+
+<Step>
+### Attaching the Script to a GameObject
+1. Back in Unity, click on the `+` icon in the top left corner of the **Hierarchy panel**.
+2. Select **Create Empty** to create a new GameObject.
+3. Name the GameObject "HelloWorldObject".
+
+<Tabs items={['Method 1', 'Method 2', 'Method 3']} defaultIndex={2}>
+
+<Tab value="Method 1">
+4. Drag and drop the script onto the GameObject in the **Hierarchy panel**.
+</Tab>
+
+<Tab value="Method 2">
+4. Drag and drop the script into the **Inspector panel** of the GameObject.
+</Tab>
+
+<Tab value="Method 3">
+4. Click on the GameObject in the **Hierarchy panel**.
+5. Click on the **Add Component** button in the **Inspector panel**.
+6. Search for your script name and select it.
+</Tab>
+
+</Tabs>
+
+</Step>
+
+<Step>
+### Running Your Game
+1. Press the play button at the top of the Unity Editor.
+2. Check the Console tab at the bottom of the Unity Editor to see the output.
+3. You should see "Hello, World!" printed in the console.
+</Step>
+
+<Step>
+### Video Showcase
+Watch this video to see the steps in action:
+<Accordions>
+  <Accordion title="Preview Examples">
+    <img src="https://i.ibb.co/3fxkDzV/Scripting-Game-Object.gif" alt="scripting-game-object"  style={{ width: '100%' }} />
+  </Accordion>
+</Accordions>
+</Step>
+</Steps>
+
+<hr className="spacer" />
+## <p className="congratulations"> Congratulations!  </p> You've Successfully Created Your First Lua Script in Unity
+
+<div className="footer-note">
+  You've successfully created a Lua script and attached it to a game object in Unity to print "Hello, World!" in the console.
+  Lets move on to more advanced scripting concepts!
+  Happy coding!
+</div>
+
+<Cards>
+  <Card title="Learn More" href="/docs/API/classes/LuaBehavior" className="card" />
+</Cards>

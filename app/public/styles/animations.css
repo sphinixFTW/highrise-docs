@@ -1,0 +1,11 @@
+@keyframes shine {
+  0% {
+    color: var(--primary-purple);
+  }
+  50% {
+    color: var(--primary-yellow); /* Change color midway */
+  }
+  100% {
+    color: var(--primary-purple);
+  }
+}
